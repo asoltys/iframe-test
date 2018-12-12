@@ -1,0 +1,17 @@
+<script>
+document.addEventListener("DOMContentLoaded", function(event) { 
+   navigator.mediaDevices.getUserMedia({ audio: true, video: { width: 1280, height: 720 } },
+      function(stream) {
+         var video = document.querySelector('video');
+         video.srcObject = stream;
+         video.onloadedmetadata = function(e) {
+           video.play();
+         };
+      },
+      console.log
+   );
+})
+    </script>
+
+herro
+<video width="1280" height="720" style="width: 1280px; height: 720px"></video>
